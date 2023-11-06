@@ -1,0 +1,28 @@
+@use "../layout/vars" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  // background-color: #eee;
+  font-family: $font-primary;
+}
+
+section {
+  padding: $main-padding 0;
+  position: relative;
+}

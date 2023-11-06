@@ -1,0 +1,73 @@
+@use "../layout/vars" as *;
+@use "../helpers/functions" as *;
+
+.hero {
+  background-image: url(../img/bg-img-1.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 515px;
+  @include flex-content(center, center);
+
+  & .search-form {
+    background-color: $light-color;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: $main-spacing;
+    padding: $main-padding $padding-2;
+
+    & .form-group {
+      flex: 1 25%;
+      position: relative;
+      @include flex-content(center, center);
+
+      & i {
+        color: $primary-color;
+        font-size: $font-size-icon;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+
+      & .form-control,
+      & .form-select {
+        border-radius: 0;
+        padding: $padding-1;
+        padding-left: $padding-5;
+      }
+
+      & .btn-primary {
+        background-color: $primary-color;
+        border: none;
+        border-radius: 0;
+        width: 100%;
+        padding: $padding-1;
+        text-transform: uppercase;
+        font-weight: $font-bold;
+        transition: $main-transition;
+
+        &:hover {
+          background-color: $dark-color;
+        }
+      }
+    }
+  }
+
+  & .need-help {
+    background-color: $light-color;
+    font-size: 0.8rem;
+    padding: $padding-1 $padding-2;
+    @include flex-content(space-between, center);
+
+    & span {
+      color: $color-text;
+    }
+
+    & a {
+      color: $primary-color;
+      font-weight: bold;
+    }
+  }
+}

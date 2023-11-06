@@ -1,0 +1,84 @@
+@use "../layout/vars" as *;
+@use "../helpers/functions" as *;
+
+.section-gray {
+  background-color: $section-color;
+
+  & .level-slider {
+    width: 100%;
+
+    & .level-slider-item-container {
+      padding: $padding-1;
+
+      & img {
+        width: 100%;
+      }
+
+      & .level-slider-item {
+        width: 100%;
+        margin-right: $margin-1;
+        padding: $padding-2 $padding-1;
+        background-color: $light-color;
+
+        & h3 {
+          font-size: $font-size-title;
+          color: $primary-color;
+        }
+        & p {
+          font-size: $font-size-text;
+          color: $color-text;
+          line-height: $line-2;
+        }
+
+        & .btn-primary {
+          display: inline-block;
+          background-color: $primary-color;
+          border: none;
+          border-radius: 0;
+          text-transform: uppercase;
+          letter-spacing: $space-2;
+        }
+      }
+    }
+  }
+
+  & .star-places {
+    & .star-places-header {
+      background-color: $primary-color;
+      padding: $padding-2;
+      color: $light-color;
+
+      & h3 {
+        font-size: $font-size-title;
+        font-weight: $font-light;
+      }
+
+      & p {
+        font-size: $font-size-text;
+        margin: 0;
+      }
+    }
+    & .star-places-body {
+      padding: $padding-2;
+      background-color: $light-color;
+
+      & a {
+        @include flex-content(start, center);
+        gap: $main-spacing;
+        background-color: $section-color;
+        margin-top: $margin-1;
+        transition: $main-transition;
+
+        &:hover {
+          background-color: #c1c1c1;
+          color: $primary-color;
+        }
+
+        & h4 {
+          font-size: $font-size-title;
+          font-weight: $font-light;
+        }
+      }
+    }
+  }
+}

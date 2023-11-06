@@ -1,0 +1,36 @@
+@use "../layout/vars" as *;
+@use "../helpers/functions" as *;
+
+.header {
+  & .navbar {
+    min-height: $primary-height;
+
+    & .logo-text {
+      display: inline-block;
+      padding: $padding-1;
+      font-weight: bold;
+      font-size: $font-size-title;
+    }
+
+    & .level-nav-link.nav-link {
+      padding: $padding-1 $main-padding;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $light-color;
+      }
+    }
+
+    // Small
+    @include responsiveScreen(small) {
+      & .level-nav-link.nav-link {
+        padding: calc($main-padding * 2) $main-padding;
+
+        &:hover {
+          background-color: $primary-color;
+          color: $light-color;
+        }
+      }
+    }
+  }
+}

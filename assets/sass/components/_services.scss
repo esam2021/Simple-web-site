@@ -1,0 +1,50 @@
+@use "../layout/vars" as *;
+@use "../helpers/functions" as *;
+
+.section-down-arrow {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: $primary-height;
+}
+
+.article {
+  text-align: center;
+  padding: $main-padding;
+  margin-top: $margin-5;
+  transition: $main-transition;
+  color: $primary-color;
+  cursor: pointer;
+
+  & .article-icon {
+    font-size: $font-size-section-title;
+    margin-bottom: $margin-2;
+  }
+
+  & .article-title {
+    padding: $padding-1;
+    line-height: $line-2;
+    text-transform: uppercase;
+    font-size: $font-size-title;
+    font-weight: $font-bold;
+    letter-spacing: 2px;
+  }
+
+  & .article-content {
+    padding: $padding-1;
+    line-height: $line-2;
+    font-size: $font-size-text;
+    color: $color-text;
+  }
+
+  & .btn-primary {
+    background-color: transparent;
+    color: $primary-color;
+    border: none;
+  }
+
+  &:hover {
+    scale: 1.1;
+    box-shadow: $main-shadow;
+  }
+}

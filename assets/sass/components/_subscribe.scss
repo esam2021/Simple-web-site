@@ -1,0 +1,27 @@
+@use "../layout/vars" as *;
+@use "../helpers/functions" as *;
+
+.section-color {
+  background-color: $primary-color;
+  color: $light-color;
+
+  & .section-title {
+    font-size: $font-size-section-title;
+  }
+
+  & .section-subtitle {
+    font-size: $font-size-title;
+  }
+
+  & .btn-white {
+    padding: $padding-1;
+    border: 1px solid $light-color;
+    color: inherit;
+    transition: $main-transition;
+
+    &:hover {
+      background-color: $dark-color;
+      color: $primary-color;
+    }
+  }
+}

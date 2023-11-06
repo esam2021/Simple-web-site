@@ -1,0 +1,43 @@
+@use "../layout/vars" as *;
+@use "../helpers/functions" as *;
+
+.contact {
+  padding-top: $padding-5;
+  //   background-image: url(../img/img-04.jpg);
+  //   background-size: cover;
+
+  .form-group {
+    display: flex;
+    position: relative;
+
+    & i {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: $font-size-title;
+      color: $primary-color;
+    }
+
+    & .form-control {
+      padding: $padding-1 $padding-5;
+      background-color: $section-color;
+      color: $light-color;
+      outline: none;
+      border: none;
+      font-size: $font-size-text;
+      margin-bottom: $margin-1;
+    }
+  }
+
+  & .btn-primary {
+    display: block;
+    padding: $padding-1;
+    margin-top: $margin-1;
+    background-color: $primary-color;
+    font-size: $font-size-text;
+    letter-spacing: $space-2;
+    border-radius: 0;
+    border: none;
+    text-align: center;
+  }
+}
